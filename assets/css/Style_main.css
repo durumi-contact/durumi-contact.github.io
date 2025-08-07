@@ -1,0 +1,42 @@
+/* 메인 내부 텍스트 스타일 */
+.main h1 {
+    font-size: 2.7rem;
+    font-weight: 800;
+    color: #fc5623;
+    margin-bottom: 18px;
+    margin-left: 10%;
+    text-align: left;
+    text-shadow: 0 4px 16px rgba(255,126,95,0.08), 0 1px 0 #fff;
+    letter-spacing: 1.5px;
+    font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+.main h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ff735a;
+    margin: 5% 0 16px 10%;
+    text-align: left;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(254,180,123,0.08);
+    font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+.main h3 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000000;
+    margin: 1% 0 5% 10%;
+    text-align: left;
+    line-height: 1.6;
+    font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+.main h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #000000;
+    margin: 0 0 1% 10%;
+    text-align: left;
+    font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
+}
