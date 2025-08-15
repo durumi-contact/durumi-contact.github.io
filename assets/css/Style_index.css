@@ -39,6 +39,7 @@ html, body {
     left: 0;
     right: 0;
     height: 80px;
+    z-index: 1000;
     /*좌우 여백 자동 계산*/
     margin-left: auto;
     margin-right: auto;
