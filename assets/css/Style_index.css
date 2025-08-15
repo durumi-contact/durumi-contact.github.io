@@ -141,7 +141,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 128px 16px 0 16px; /* header 높이만큼 추가 */
+    padding: 50px 16px 0 16px; /* header 높이만큼 추가 */
 }
 
 /* 메인 텍스트 스타일 */
