@@ -252,11 +252,25 @@ html, body {
         height: auto;
         padding: 8px 0;
     }
-    .logo-title {
+    .menu ul {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding: 8px 0;
+    }
+    .logo li a {
         font-size: 1.3rem;
     }
     .menu ul {
-        gap: 18px;
+        gap: 0px;
+    }
+    .menu ul li a {
+        font-size: 0.8rem;
     }
 }
 
