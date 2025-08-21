@@ -23,3 +23,4 @@ function showImage() {
         mapImage.classList.add('show');
     }, 100);
 }
+
