@@ -1,7 +1,7 @@
 /* construction 페이지 메인 영역 스타일 */
 
 /* 텍스트 표시 영역 스타일 */
-.text-display {
+.building-text-display {
     padding-left: 20px;
     font-size: 30px;
     font-weight: bold;
@@ -13,7 +13,7 @@
 }
 
 /* 애니메이션 클래스 */
-.text-display.show {
+.building-text-display.show {
     opacity: 1;
     transform: translateX(0);
 }

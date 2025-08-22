@@ -1,6 +1,6 @@
 function showText() {
-    const textDisplay = document.getElementById('buildingTextDisplay');
-    textDisplay.innerHTML = '국립경국대학교';
+    const textDisplay = document.getElementById('floorTextDisplay');
+    textDisplay.innerHTML = '공대 1호관 4층';
     // 애니메이션을 위해 약간의 지연 후 클래스 추가
     setTimeout(() => {
         textDisplay.classList.add('show');
@@ -8,7 +8,7 @@ function showText() {
 }
 
 function showImage() {
-    const mapImage = document.getElementById('mapImage');
+    const mapImage = document.getElementById('floor4EngineeringImage');
     // 애니메이션을 위해 약간의 지연 후 클래스 추가
     setTimeout(() => {
         mapImage.classList.add('show');
@@ -23,4 +23,3 @@ document.addEventListener('DOMContentLoaded', function() {
         showImage();
     }, 500); // 0.5초 후 이미지 애니메이션 시작
 });
-

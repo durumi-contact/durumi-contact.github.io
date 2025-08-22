@@ -1,0 +1,17 @@
+/* 텍스트 표시 영역 스타일 */
+.floor-text-display {
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-in-out;
+}
+
+/* 애니메이션 클래스 */
+.floor-text-display.show {
+    opacity: 1;
+    transform: translateX(0);
+}
