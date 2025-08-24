@@ -82,6 +82,7 @@ function initTypedAnimation() {
         container.appendChild(cursor);
         // 일정한 시간 간격을 두고 반복해서 실행하고 싶을때 사용 
         setInterval(() => {
+            // 투명도 조절
             cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
         }, TYPED_ANIMATION_CONFIG.cursorSettings.blinkSpeed);
     }
@@ -91,7 +92,9 @@ function initTypedAnimation() {
 }
 
 // 페이지 로드 시 애니메이션 초기화 
-document.addEventListener('DOMContentLoaded', initTypedAnimation);
+document.addEventListener('DOMContentLoaded', function() {
+    initTypedAnimation();
+});
 
 
 

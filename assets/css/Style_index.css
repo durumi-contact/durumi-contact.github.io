@@ -136,13 +136,14 @@ html, body {
 /* 메인 콘텐츠 영역 스타일 */
 .main {
     flex: 1 0 auto; /*남는 공간만큼 확장 가능, 공간 부족시 줄어들지 않음, 요소의 기본 크기를 컨텐츠에 따라 자동 결정*/
-    min-width: 100%;
     min-height: 100%; /* 최소 높이를 100%로 설정하고, 내용에 따라 늘어날 수 있도록 함 */
+    width: 100%;
     background-color: #f1d2b0;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding: 50px 16px 0 16px; /* header 높이만큼 추가 */
+    overflow: visible;
 }
 
 /* 메인 텍스트 스타일 */
@@ -159,9 +160,14 @@ html, body {
 }
 
 .cursor {
+    /*px 고정된 값 크기 rem html의 글꼴크기를 기준으로 하는 상대 단위*/
     width: 2px;
-    height: var(--typed-content-size);
-    background-color: white;
+    height: 4rem;
+    background-color: #000000;
+    /*너비와 높이를 보유하지만 요소와 같은 줄에 놓고 싶어 작성*/
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: bottom;
 }
 
 /* 버튼 스타일 */
