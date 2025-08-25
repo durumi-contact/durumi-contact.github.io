@@ -27,7 +27,6 @@
     position: relative; /* 마커의 기준 컨테이너 */
     margin-left: auto;
     margin-right: auto;
-    overflow: scroll;
 }
 
 .floor4-engineering-image.show {
