@@ -1,0 +1,114 @@
+/* 연혁 전체 영역 */
+.history {
+    padding-left: 20px;
+    max-width: 900px;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #333;
+    position: relative;
+    /* 초기 애니메이션 상태 */
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* 표시 상태 */
+.history.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 구간 헤더 (예: 2025 ~ 2024) */
+.history h2 {
+    margin: 2rem 0 1rem;
+    border-left: 6px solid #4CAF50;
+    padding-left: 0.8rem;
+    color: #222;
+    padding-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+/* 연도별 블록 */
+.year-block {
+    margin: 2rem 0;
+    padding-left: 2rem;
+    position: relative;
+    border-left: 2px solid #e0e0e0;
+    /* 초기 애니메이션 상태 */
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* 표시 상태 */
+.year-block.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 연도 타이틀 */
+.year-block h3 {
+    font-size: 2rem; /* 기존 1.5rem → 2rem로 크게 */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #4CAF50;
+    position: relative;
+    font-weight: bold;
+    font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+/* 연도 옆 원형 포인트 */
+.year-block h3::before {
+    content: '';
+    position: absolute;
+    left: -31px;
+    top: 6px;
+    width: 16px; /* 원도 살짝 키움 */
+    height: 16px;
+    background: #4CAF50;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 2px #4CAF50;
+}
+
+/* 연혁 상세 항목 */
+.year-block ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.year-block ul li {
+    margin-bottom: 1.1rem; /* 항목 간격도 살짝 넓힘 */
+    line-height: 1.8;
+    padding-left: 0.5rem;
+    position: relative;
+    font-size: 1.25rem; /* 기존보다 크게 */
+    font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
+
+}
+
+.year-block ul li strong {
+    font-weight: 700;
+    color: #222;
+    font-size: 1.3rem; /* 강조 텍스트도 더 크게 */
+}
+
+/* hover 시 강조 */
+.year-block ul li:hover {
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    padding-left: 0.7rem;
+    background: rgba(76, 175, 80, 0.06);
+}
+
+/* 반응형: 타이포 스케일 조정 */
+@media (max-width: 1280px) {
+    .history { padding: 0 12px; }
+}
+
+@media (max-width: 768px) {
+    .history h2 { font-size: 1.6rem; }
+    .year-block h3 { font-size: 1.4rem; }
+    .year-block ul li { font-size: 1rem; line-height: 1.6; }
+}

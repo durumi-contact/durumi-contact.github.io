@@ -4,6 +4,8 @@
 .building-text-display {
     padding-left: 20px;
     font-size: 30px;
+    margin: 2rem 0 1rem;
+    border-left: 6px solid #8b8cf0;
     font-weight: bold;
     color: #333;
     font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
@@ -81,68 +83,3 @@
     left: 700px;
     top: 330px;
 }
-
-/* 모달 배경 */
-.modal {
-    display: none; /* 기본은 숨김 */
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px); /*흐림 효과 적용*/
-  }
-  
-  /* 모달 박스 */
-  .modal-content {
-    position: relative;
-    background: #fff;
-    margin: 10% auto;
-    padding: 30px;
-    border-radius: 15px;
-    width: 400px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    animation: fadeIn 0.4s ease;
-  }
-  
-  /* 텍스트 */
-  .modal-content h2 {
-    margin-bottom: 15px;
-    text-align: center;
-    color: #2c3e50;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;;/*글자 사이의 간격*/
-    text-shadow: 0 2px 8px rgba(254,180,123,0.08);
-    font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
-  }
-  .modal-content p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 25px;
-    line-height: 1.5;
-  }
-  
-  /* 확인 버튼 */
-  .confirm-btn {
-    background: #3498db;
-    border: none;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  .confirm-btn:hover {
-    background: #2980b9;
-  }
-  
-  /* 애니메이션 */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  

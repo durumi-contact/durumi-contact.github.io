@@ -1,3 +1,3 @@
-# Creative Theme for Jekyll
+# 두루미 GKNU 메타버스 홍보 페이지 
 
 

@@ -143,7 +143,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 50px 16px 0 16px; /* header 높이만큼 추가 */
+    padding: 40px 16px 0 16px; /* header 높이(80px) + 여유 공간(20px) 추가 */
 }
 
 /* 메인 텍스트 스타일 */
@@ -193,12 +193,14 @@ html, body {
 /* 푸터 영역 스타일 */
 .footer {
     flex-shrink: 0; /* 푸터가 줄어들지 않도록 설정 */
-    width: 100%;
+    min-width: 100%;
+    width: fit-content; /* 가로 크기를 내용에 맞게 자동 조정 */
     min-height: 80px; /* 푸터의 최소 높이 설정 */
     background-color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 999;
 }
 
 /* 푸터 텍스트 영역 스타일 */
