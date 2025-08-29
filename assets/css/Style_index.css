@@ -79,12 +79,39 @@ html, body {
     text-shadow: 0 2px 8px rgba(0,0,0,0.08);
     font-family: 'DM Sans', sans-serif;
     text-decoration: none;
+    position: relative;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.logo li a:hover {
+.logo li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 6px;
+    height: 3px;
     background: #ffe5b4;
-    color: #0077b6;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
+    z-index: 0;
+}
+
+.logo li a:hover::after,
+.logo li a:focus::after {
+    transform: scaleX(1);
+}
+
+.logo li a:hover,
+.logo li a:focus {
+    color: #c8a755;
+    background: #fff8e1;
+    box-shadow: 0 2px 8px rgba(200,167,85,0.08);
 }
 
 /* 네비게이션 메뉴 영역 스타일 */
@@ -113,6 +140,7 @@ html, body {
 /* 메뉴 리스트 아이템 스타일 */
 .menu ul li {
     list-style: none;
+    position: relative; /* ::before 사용을 위해 position 추가 */
 }
 
 /* 메뉴 링크 스타일 */
@@ -124,13 +152,39 @@ html, body {
     padding: 8px 18px;
     border-radius: 8px;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative; /* ::before를 a 내부에 위치시키기 위해 필요 */
+    z-index: 1;
+    overflow: hidden;
 }
 
-/* 메뉴 링크 호버 효과 */
-.menu ul li a:hover {
-    background: #ffe5b4;
-    color: #0077b6;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+/* 메뉴 링크 호버 효과 (하단 밑줄 애니메이션) */
+.menu ul li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 6px;
+    height: 2px;
+    background: #c8a755;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+    z-index: 0;
+}
+
+.menu ul li a:hover::after,
+.menu ul li a:focus::after {
+    transform: scaleX(1);
+}
+
+/* 메뉴 링크 호버시 텍스트 색상 변경 */
+.menu ul li a:hover,
+.menu ul li a:focus {
+    color: #c8a755;
+    background: #fff8e1;
+    box-shadow: 0 2px 8px rgba(200,167,85,0.08);
 }
 
 /* 메인 콘텐츠 영역 스타일 */
