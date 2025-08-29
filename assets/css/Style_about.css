@@ -18,7 +18,7 @@
 
 .about h1 {
     margin: 2rem 0 1rem;
-    border-left: 6px solid #e04e34;
+    border-left: 6px solid #ff735a;
     padding-left: 0.8rem;
     color: #222;
     font-size: 30px;
@@ -30,7 +30,7 @@
     font-size: 2rem;
     font-weight: 700;
     color: #ff735a;
-    margin: 5% 0 16px 10%;
+    margin: 5% 0 16px 0;
     text-align: left;
     letter-spacing: 1px;
     text-shadow: 0 2px 8px rgba(254,180,123,0.08);
@@ -41,17 +41,8 @@
     font-size: 1.3rem;
     font-weight: 500;
     color: #000000;
-    margin: 1% 0 5% 10%;
+    margin: 1% 0 5% 0;
     text-align: left;
     line-height: 1.6;
-    font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
-}
-
-.about h4 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #000000;
-    margin: 0 0 1% 10%;
-    text-align: left;
     font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
 }
