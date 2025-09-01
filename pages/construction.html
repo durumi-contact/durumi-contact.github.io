@@ -10,16 +10,18 @@ styles:
     <!-- 학교 지도 내용 작성 -->
     <div id="buildingTextDisplay" class="building-text-display"></div>
     <div id="mapImage" class="MapImage">
-        <img class="map-background" src="/assets/images/school_map.png" alt="학교 지도">
-        <a href="/building_engineering1.html">
-            <img class="marker engineering1" src="/assets/images/building_engineering1.png" alt="공학 1호관">
-        </a>
-        <a href="/building_student_center.html">
-            <img class="marker student-center" src="/assets/images/building_student_center.png" alt="학생회관">
-        </a>
-        <span class="engineeringName">공학 1호관</span>
-        <span class="student_centerName">학생회관</span>
+        <img class="map-background" src="/assets/images/school_map_fix.png" alt="학교 지도">
+        <div id="engineering1Marker" class="marker engineering1">
+            <img src="/assets/images/building_engineering1.png" alt="공학 1호관">
+        </div>
+        <div id="studentCenterMarker" class="marker student-center">
+            <img src="/assets/images/building_student_center.png" alt="학생회관">
+        </div>
     </div>
-</div>
+    <!-- 모달 -->
+    <div class="modal" id="modal">
+        <div class="modal-header" id="modalTitle"></div>
+        <div class="modal-body" id="modalBody"></div>
+    </div>
 
-<script src="/assets/js/construction.js"></script>
+    <script src="/assets/js/construction.js"></script>
