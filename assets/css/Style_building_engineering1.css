@@ -2,6 +2,8 @@
 .floor-text-display {
     padding-left: 20px;
     font-size: 30px;
+    margin: 2rem 0 1rem;
+    border-left: 6px solid #8b8cf0;
     font-weight: bold;
     color: #333;
     font-family: 'DM Sans', 'Pretendard', 'Noto Sans KR', sans-serif;
