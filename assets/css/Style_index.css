@@ -246,9 +246,9 @@ html, body {
 
 /* 푸터 영역 스타일 */
 .footer {
-    flex-shrink: 0; /* 푸터가 줄어들지 않도록 설정 */
-    min-width: 100%;
-    width: fit-content; /* 가로 크기를 내용에 맞게 자동 조정 */
+    flex: 1 0 auto;
+    /* width는 JavaScript로 동적 설정됨 */
+    min-width: 100%; /* 최소 너비 보장 */
     min-height: 80px; /* 푸터의 최소 높이 설정 */
     background-color: #000;
     display: flex;
