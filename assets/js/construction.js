@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 공학 1호관 마커 이벤트
   engineering1Marker.addEventListener('mouseenter', function() {
-    openModal('공학 1호관', '클릭하시면 공대 1호관 4층 복도로 이동하실 수 있습니다..', 600, 220);
+    openModal('공학 1호관', '클릭하시면 공대 1호관 4층 복도로 이동하실 수 있습니다.', 600, 220);
   });
 
   engineering1Marker.addEventListener('mouseleave', function() {
