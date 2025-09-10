@@ -8,12 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/Style_index.css">
+    <script src="/assets/js/apply_to_all.js"></script>
+    <!-- 페이지별 스타일 적용 -->
     {% if page.styles %}
     {% for style_href in page.styles %}
     <link rel="stylesheet" href="{{ style_href }}">
     {% endfor %}
     {% endif %}
-    <script src="/assets/js/apply_to_all.js"></script>
+    <!-- 페이지별 스크립트 적용 -->
+    {% if page.scripts %}
+    {% for script_src in page.scripts %}
+    <script src="{{ script_src }}"></script>
+    {% endfor %}
+    {% endif %}
 </head>
 <body>
     <div class="container">

@@ -21,5 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // 텍스트 애니메이션 후 이미지 애니메이션 실행
     setTimeout(() => {
         showImage();
+        applyImageWidthToElement();
     }, 500); // 0.5초 후 이미지 애니메이션 시작
 });
