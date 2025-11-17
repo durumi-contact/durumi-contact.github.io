@@ -190,7 +190,7 @@ html, body {
 /* 메인 콘텐츠 영역 스타일 */
 .main {
     flex: 1 0 auto; /*남는 공간만큼 확장 가능, 공간 부족시 줄어들지 않음, 요소의 기본 크기를 컨텐츠에 따라 자동 결정*/
-    min-height: 100%; /* 최소 높이를 100%로 설정하고, 내용에 따라 늘어날 수 있도록 함 */
+    min-height: calc(100vh - 80px - 80px); /* viewport 높이 - header(80px) - footer(80px) */
     width: fit-content; /* 가로 크기를 내용에 맞게 자동 조정 */
     min-width: 100%; /* 최소 가로 크기는 100% 유지 */
     background-color: #f1d2b0;
