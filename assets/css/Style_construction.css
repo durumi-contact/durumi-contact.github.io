@@ -9,7 +9,8 @@
 .building-text-display {
     padding-left: 20px;
     font-size: 30px;
-    margin: 2rem 0 1rem;
+    margin: 4rem auto 1.5rem;
+    max-width: 1200px;
     border-left: 6px solid #8b8cf0;
     font-weight: bold;
     color: #333;
@@ -55,8 +56,8 @@
 /* 공통 마커 스타일 */
 .MapImage .marker {
   position: absolute;
-  width: 70px;
-  height: 40px;
+  width: clamp(40px, 5vw, 80px);
+  height: clamp(24px, 3vw, 48px);
   transform: translate(-50%, -100%); /* 좌표를 마커 하단 중앙으로 맞춤 */
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -86,19 +87,9 @@
 
 /* 모바일 반응형 조정 */
 @media (max-width: 768px) {
-  .MapImage .marker {
-    width: 50px;
-    height: 30px;
-  }
-  
-  .MapImage .marker.engineering1 {
-    left: 44%;
-    top: 38%;
-  }
-  
-  .MapImage .marker.student-center {
-    left: 55%;
-    top: 50%;
+  .building-text-display {
+    margin-top: 5rem;
+    font-size: 24px;
   }
 }
 

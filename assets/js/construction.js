@@ -37,6 +37,37 @@ function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 
+function attachMarkerInteractions(markerElement, config) {
+  const { title, body, modalX, modalY } = config;
+  const showModal = () => openModal(title, body, modalX, modalY);
+
+  markerElement.addEventListener('mouseenter', showModal);
+  markerElement.addEventListener('mouseleave', closeModal);
+
+  let touchTimer = null;
+
+  markerElement.addEventListener('touchstart', (event) => {
+    event.preventDefault();
+    if (touchTimer) {
+      clearTimeout(touchTimer);
+    }
+    touchTimer = setTimeout(() => {
+      showModal();
+    }, 500);
+  }, { passive: false });
+
+  const clearTouch = () => {
+    if (touchTimer) {
+      clearTimeout(touchTimer);
+      touchTimer = null;
+    }
+    closeModal();
+  };
+
+  markerElement.addEventListener('touchend', clearTouch);
+  markerElement.addEventListener('touchcancel', clearTouch);
+}
+
 // 페이지 로드 시 자동으로 텍스트와 이미지 표시
 document.addEventListener('DOMContentLoaded', function () {
   showText();
@@ -49,21 +80,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const engineering1Marker = document.getElementById('engineering1Marker');
   const studentCenterMarker = document.getElementById('studentCenterMarker');
 
-  // 공학 1호관 마커 이벤트
-  engineering1Marker.addEventListener('mouseenter', function() {
-    openModal('공학 1호관', '클릭하시면 공대 1호관 4층 복도로 이동하실 수 있습니다.', 600, 220);
+  attachMarkerInteractions(engineering1Marker, {
+    title: '공학 1호관',
+    body: '클릭하시면 공대 1호관 4층 복도로 이동하실 수 있습니다.',
+    modalX: 600,
+    modalY: 220
   });
 
-  engineering1Marker.addEventListener('mouseleave', function() {
-    closeModal();
-  });
-
-  // 학생회관 마커 이벤트
-  studentCenterMarker.addEventListener('mouseenter', function() {
-    openModal('학생회관', '클릭하시면 학생회관 1층 복도로 이동하실 수 있습니다.', 730, 280);
-  });
-
-  studentCenterMarker.addEventListener('mouseleave', function() {
-    closeModal();
+  attachMarkerInteractions(studentCenterMarker, {
+    title: '학생회관',
+    body: '클릭하시면 학생회관 1층 복도로 이동하실 수 있습니다.',
+    modalX: 730,
+    modalY: 280
   });
 });
