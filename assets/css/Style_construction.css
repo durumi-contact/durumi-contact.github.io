@@ -9,8 +9,7 @@
 .building-text-display {
     padding-left: 20px;
     font-size: 30px;
-    margin: 4rem auto 1.5rem;
-    max-width: 1200px;
+    margin: 4rem 20px 1.5rem 40px;
     border-left: 6px solid #8b8cf0;
     font-weight: bold;
     color: #333;
@@ -89,7 +88,22 @@
 @media (max-width: 768px) {
   .building-text-display {
     margin-top: 5rem;
-    font-size: 24px;
+    font-size: 26px;
+  }
+
+  .MapImage .marker {
+    width: clamp(32px, 12vw, 48px);
+    height: clamp(20px, 8vw, 32px);
+  }
+  
+  .MapImage .marker.engineering1 {
+    left: 44%;
+    top: 38%;
+  }
+  
+  .MapImage .marker.student-center {
+    left: 55%;
+    top: 50%;
   }
 }
 
