@@ -8,11 +8,25 @@ scripts:
 - /assets/js/building_student_center.js
 ---
 <!-- Jekyll용 Front Matter 추가 및 경로 수정 -->
-<div class="main">
+
     <!-- 학교 지도 내용 작성 -->
     <div id="floorTextDisplay" class="floor-text-display"></div>
     <div id="floor1StudentCenterImage" class="floor1-studentCenter-image">
         <img class="floor1-studentCenter" src="/assets/images/floor_student_center_1.png">
     </div>
-</div>
+    <div id="deviceModal" class="device-modal" aria-hidden="true" role="dialog" aria-labelledby="deviceModalTitle">
+        <div class="device-modal__content">
+            <button type="button" class="device-modal__close" id="deviceModalClose" aria-label="닫기">&times;</button>
+            <h3 id="deviceModalTitle">디바이스를 선택해 주세요</h3>
+            <p>사용하시는 기기를 선택하시면 해당 스토어 페이지로 이동합니다.</p>
+            <div class="device-modal__actions">
+                <a id="deviceModalAndroid" class="device-modal__button device-modal__button--android" target="_blank" rel="noopener noreferrer">
+                    안드로이드
+                </a>
+                <a id="deviceModalIos" class="device-modal__button device-modal__button--ios" target="_blank" rel="noopener noreferrer">
+                    아이폰
+                </a>
+            </div>
+        </div>
+    </div>
 

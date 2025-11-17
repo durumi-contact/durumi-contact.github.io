@@ -31,6 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .floor1-studentCenter-image img {
@@ -43,4 +44,108 @@
 .floor1-studentCenter-image.show {
     opacity: 1;
     transform: translateX(0);
+}
+
+/* 기기 선택 모달 */
+.device-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1100;
+}
+
+.device-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.device-modal__content {
+    position: relative;
+    width: 90%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.device-modal__content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: #222;
+}
+
+.device-modal__content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.device-modal__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.device-modal__button {
+    flex: 1 1 140px;
+    padding: 0.9rem 1rem;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.device-modal__button--android {
+    background: linear-gradient(135deg, #18a558, #0c7c3f);
+    box-shadow: 0 10px 20px rgba(12, 124, 63, 0.25);
+}
+
+.device-modal__button--ios {
+    background: linear-gradient(135deg, #5c6ac4, #3b49b0);
+    box-shadow: 0 10px 20px rgba(60, 72, 176, 0.25);
+}
+
+.device-modal__button:hover,
+.device-modal__button:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    opacity: 0.95;
+}
+
+.device-modal__close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    border: none;
+    background: transparent;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.device-modal__close:hover {
+    color: #333;
+}
+
+@media (max-width: 480px) {
+    .device-modal__content {
+        padding: 1.5rem;
+    }
+
+    .device-modal__button {
+        flex: 1 1 100%;
+    }
 }
