@@ -72,16 +72,15 @@
   object-fit: contain;
 }
 
-/* 좌표 배치: 반응형으로 조정 */
+/* 좌표 배치: 비율 조정 (중앙과 실제 위치 반영) */
 .MapImage .marker.engineering1 {
-  left: 44%;
-  top: 38%;
+  left: 42.5%;
+  top: 38.5%;
 }
 
-/* 좌표 배치: 반응형으로 조정 */
 .MapImage .marker.student-center {
-  left: 55%;
-  top: 50%;
+  left: 54.2%;
+  top: 48.5%;
 }
 
 /* 모바일 반응형 조정 */
@@ -92,18 +91,18 @@
   }
 
   .MapImage .marker {
-    width: clamp(32px, 12vw, 48px);
-    height: clamp(20px, 8vw, 32px);
+    width: clamp(24px, 8vw, 32px);
+    height: clamp(14px, 5vw, 20px);
   }
   
   .MapImage .marker.engineering1 {
-    left: 40%;
-    top: 35%;
+    left: 43%;
+    top: 38%;
   }
   
   .MapImage .marker.student-center {
-    left: 50%;
-    top: 45%;
+    left: 54%;
+    top: 48%;
   }
 }
 
