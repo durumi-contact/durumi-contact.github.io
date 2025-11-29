@@ -95,6 +95,3 @@ function initTypedAnimation() {
 document.addEventListener('DOMContentLoaded', function() {
     initTypedAnimation();
 });
-
-
-
