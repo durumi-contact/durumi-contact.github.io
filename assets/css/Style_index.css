@@ -341,6 +341,23 @@ html, body {
     }
 }
 
+@media (max-width: 375px) {
+    .header {
+        padding-left: 8px;
+        padding-right: 8px;
+        padding: 8px 0;
+    }
+    .logo li a {
+        font-size: 1.3rem;
+    }
+    .menu ul {
+        gap: 0px;
+    }
+    .menu ul li a {
+        font-size: 0.65rem;
+    }
+}
+
 /* 로고 옆 사이트명 스타일 */
 .logo-title {
     font-size: 2rem;
